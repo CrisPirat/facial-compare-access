@@ -1,0 +1,10 @@
+flask==2.0.2
+Werkzeug==2.0.3
+flask_sqlalchemy==2.5.1
+flask_wtf==1.0.0
+flask_migrate==3.1.0
+Flask-Minify==0.37
+python-dotenv==0.19.2
+#flask_mysqldb==2.0.0
+opencv-python
+face-recognition
