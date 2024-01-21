@@ -15,6 +15,12 @@ class User(db.Model):
     base64_picture  = db.Column(db.LargeBinary)
     encoding        = db.Column(db.PickleType)
 
+    def __init__(self, **kwargs):
+        for property, value in kwargs.items():
+            if hasattr(value, '__iter__') and not isinstance(value, str):
+                value = value[0]
+
+            setattr(self, property, value)
 
     def __repr__(self):
         return str('User --> {} - {} {}'.format(self.id, self.names, self.lastnames))

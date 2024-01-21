@@ -6,6 +6,7 @@ load_dotenv()
 class Config(object):
 
     basedir = os.path.abspath(os.path.dirname(__file__))
+    DIRBASE = basedir
 
     SECRET_KEY  = os.getenv('SECRET_KEY', None)
 
